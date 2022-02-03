@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { device } from '../device';
 import theme from '../theme';
+import CoffeeCard from '../components/coffee-card';
 
 const HomeContainer = styled.div`
 
@@ -49,8 +50,7 @@ const Home = () => (
             </Title>
         </MainImage>
         <HomeContent>
-
-
+            <CoffeeCard image="https://sbs-assets.s3.amazonaws.com/orens-coffee/776269AB-250F-485A-8F9A-0447B70F49CA.png" title="Kenya" alttext="Illustration of a bottle of wine in front of a valley" items={[]}/>
         </HomeContent>
     </HomeContainer>
 );
