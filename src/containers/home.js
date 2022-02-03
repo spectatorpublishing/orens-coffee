@@ -17,13 +17,14 @@ const MainImage = styled.div`
 `;
 
 const Title = styled.div`
+    text-shadow: 4px 4px 8px ${theme.colors.coffee};
     position: absolute;
-   text-align: center;
-   top: 30vh;
-   color: ${theme.colors.cream};
-   font-size: 6rem;
-   font-family: 'Fraunces', serif;
-   font-weight: normal;
+    text-align: center;
+    top: 30vh;
+    color: ${theme.colors.cream};
+    font-size: 6rem;
+    font-family: 'Fraunces', serif;
+    font-weight: normal;
 `;
 
 const TopText = styled.div`
@@ -98,14 +99,15 @@ const Line = styled.span`
 
 const Home = () => (
     <HomeContainer>
+
         <MainImage>
             <img src="https://sbs-assets.s3.amazonaws.com/orens-coffee/24298B46-EA61-4280-9591-0FA6FE035C07.gif" alt="World map with highlighted coffee regions"/>
             <Title>
                 <TopText><b>Bean to Beverage</b></TopText>
                 <BottomText>Your Coffee’s World-Class Journey</BottomText>
             </Title>
-
         </MainImage>
+
         <HomeContent>
             <Subtitle> 
                 Start Your Journey Here
@@ -188,11 +190,8 @@ const Home = () => (
                 as a handcrafted pick-me-up, whole beans, or ground coffee. Oren’s Coffee has a store located conveniently next to 
                 Tom’s Restaurant and Milano Market at 2882 Broadway. 
             </Body>
-            
         </HomeContent>
-
-
-
+        
     </HomeContainer>
 );
 
