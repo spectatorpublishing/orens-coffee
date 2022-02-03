@@ -35,7 +35,7 @@ const BottomText = styled.div`
 
 const HomeContent = styled.div`
     color: ${theme.colors.coffee};
-    padding: 4rem 0rem 2rem 0rem;
+    padding: 4rem 0rem 6rem 0rem;
 `;
 
 const Subtitle = styled.div`
@@ -191,7 +191,7 @@ const Home = () => (
                 Tom’s Restaurant and Milano Market at 2882 Broadway. 
             </Body>
         </HomeContent>
-        
+
     </HomeContainer>
 );
 
