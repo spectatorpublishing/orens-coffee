@@ -1,9 +1,41 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { cover } from 'intrinsic-scale';
 import theme from '../theme';
+import useWindowDimensions from '../hooks/window.js'
 
 const redPinUrl = "https://sbs-assets.s3.amazonaws.com/orens-coffee/pushpin+3.png"
-const mapUrl = "https://sbs-assets.s3.amazonaws.com/orens-coffee/BE69181A-6087-425B-9A61-ED9EF9292BE97CC2ED9C-F0CB-44A6-87F5-7982A8191ED5.png"
+const map = {
+	url: "https://sbs-assets.s3.amazonaws.com/orens-coffee/BE69181A-6087-425B-9A61-ED9EF9292BE97CC2ED9C-F0CB-44A6-87F5-7982A8191ED5.png",
+	width: 2376,
+	height: 1584,
+}
+
+// compute pin location on map
+// iw: image width
+// ih: image height
+// x:  image displacement along the x axis
+// y:  image displacement along the y axis
+const computeLocation = (iw, ih, x, y) => (
+	{
+		kenya: [
+			iw * 0.565 + x,
+			ih * 0.54 + y
+		],
+		manita: [
+			iw * 0.156 + x,
+			ih * 0.487 + y
+		],
+		sumatra: [
+			iw * 0.774 + x,
+			ih * 0.553 + y
+		],
+		nyc: [
+			iw * 0.205 + x,
+			ih * 0.313 + y
+		]
+	}
+)
 
 const Map = styled.img`
 	width: 100vw;
@@ -14,8 +46,8 @@ const Map = styled.img`
 const PinImage = styled.img`
 	position: absolute;
 	width: 2.6%;
-	left: ${props => `${props.xCord}vw`};
-	top: ${props => `${props.yCord}vw`};
+	left: ${props => `${props.xCord}px`};
+	top: ${props => `${props.yCord}px`};
 `
 
 const Modal = styled.div`
@@ -77,16 +109,19 @@ const Manita = withCard(Card)
 const Sumatra = withCard(Card)
 const NYC = withCard(Card)
 
-
 export default function Explore() {
+	const { width: vw, height: vh } = useWindowDimensions();
+	const { width: iw, height: ih, x, y } = cover(vw, vh, map.width, map.height)
+	const marks = computeLocation(iw, ih, x, y)
+
 	return (
 		<>
-			<Map src={mapUrl} />
+			<Map src={map.url} />
 
-			<Kenya xCord="15.5" yCord="11.75" />
-			<Manita xCord="15.5" yCord="5" />
-			<Sumatra xCord="75.5" yCord="11.75" />
-			<NYC xCord="50.5" yCord="11.75" />
+			<Kenya xCord={marks.kenya[0]} yCord={marks.kenya[1]} />
+			<Manita xCord={marks.manita[0]} yCord={marks.manita[1]} />
+			<Sumatra xCord={marks.sumatra[0]} yCord={marks.sumatra[1]} />
+			<NYC xCord={marks.nyc[0]} yCord={marks.nyc[1]} />
 		</>
 	)
 }
