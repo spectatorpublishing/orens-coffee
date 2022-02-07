@@ -18,17 +18,34 @@ const MainImage = styled.div`
         height: auto;
         object-fit: cover;
     }
+    justify-content: center;
+    vertical-align: middle;
+
+    @media (max-width: ${theme.sizes.tablet}) {
+        align-items: center
+    }
+    /* mask-image: linear-gradient(rgba(0,0,0,1), 80%, transparent); */
 `;
 
 const Title = styled.div`
     text-shadow: 4px 4px 8px ${theme.colors.coffee};
     position: absolute;
     text-align: center;
-    top: 30vh;
     color: ${theme.colors.cream};
     font-size: 6rem;
     font-family: 'Fraunces', serif;
     font-weight: normal;
+
+    @media (min-width: ${theme.sizes.aboveTablet}) {
+        top: 30vh;
+    }
+    @media (max-width: ${theme.sizes.tablet}) {
+        font-size: 4rem;
+    }
+    @media (max-width: ${theme.sizes.mobile}) {
+        font-size: 2rem;
+    }
+    
 `;
 
 const TopText = styled.div`
@@ -40,6 +57,12 @@ const BottomText = styled.div`
 const HomeContent = styled.div`
     color: ${theme.colors.coffee};
     padding: 4rem 0rem 6rem 0rem;
+    @media (max-width: ${theme.sizes.tablet}) {
+        padding: 4rem 0rem 6rem 0rem;
+    }
+    @media (max-width: ${theme.sizes.mobile}) {
+        padding: 4rem 0rem 4rem 0rem;
+    }
 `;
 
 const Subtitle = styled.div`
@@ -49,6 +72,17 @@ const Subtitle = styled.div`
     font-weight: bold;
     text-decoration-line: underline;
     margin-bottom: 4rem;
+    cursor: pointer;
+    :hover {
+        color: ${theme.colors.wine};
+    }
+
+    @media (max-width: ${theme.sizes.tablet}) {
+        font-size: 2.5rem;
+    }
+    @media (max-width: ${theme.sizes.mobile}) {
+        font-size: 1.5rem;
+    }
 `;
 
 const Heading = styled.div`
@@ -56,6 +90,16 @@ const Heading = styled.div`
     font-size: 2rem;
     font-family: 'Fraunces', serif;
     font-weight: bold;
+
+    @media (max-width: ${theme.sizes.tablet}) {
+        font-size: 1.75rem;
+        margin: 2rem 6rem 0rem 6rem;
+
+    }
+    @media (max-width: ${theme.sizes.mobile}) {
+        font-size: 1.5rem;
+        margin: 2rem 2rem 0rem 2rem;
+    }
 `;
 
 const SmallHeading = styled.div`
@@ -63,7 +107,15 @@ const SmallHeading = styled.div`
     margin: 2rem 8rem 0rem 8rem;
     font-size: 1.5rem;
     font-family: 'Fraunces', serif;
-    font-weight: normal;
+    font-weight: bold;
+    @media (max-width: ${theme.sizes.tablet}) {
+        font-size: 1.5rem;
+        margin: 2rem 6rem 0rem 6rem;
+
+    }
+    @media (max-width: ${theme.sizes.mobile}) {
+        font-size: 1rem;
+        margin: 2rem 2rem 0rem 2rem;
 `;
 
 const Body = styled.div`
@@ -73,12 +125,31 @@ const Body = styled.div`
     font-style: normal;
     font-weight: normal;
     line-height: 2.25rem;
+
+    @media (max-width: ${theme.sizes.tablet}) {
+        font-size: 1.25rem;
+        line-height: 2rem;
+        margin: 2rem 6rem 0rem 6rem;
+
+    }
+    @media (max-width: ${theme.sizes.mobile}) {
+        font-size: 1rem;
+        line-height: 2rem;
+        margin: 2rem 2rem 0rem 2rem;
+
+    }
 `;
 
 const Capital = styled.span`
     font-size: 6rem;
     font-family: 'Fraunces', serif;
     font-weight: normal;
+    @media (max-width: ${theme.sizes.tablet}) {
+        font-size: 4rem;
+    }
+    @media (max-width: ${theme.sizes.mobile}) {
+        font-size: 2rem;
+    }
 `;
 
 const Logo = styled.div`
@@ -107,7 +178,7 @@ const Home = () => (
         <MainImage>
             <img src="https://sbs-assets.s3.amazonaws.com/orens-coffee/24298B46-EA61-4280-9591-0FA6FE035C07.gif" alt="World map with highlighted coffee regions"/>
             <Title>
-                <TopText><b>Bean to Beverage</b></TopText>
+                <TopText><b>Bean to Beverage:</b></TopText>
                 <BottomText>Your Coffee’s World-Class Journey</BottomText>
             </Title>
         </MainImage>
