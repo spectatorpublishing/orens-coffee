@@ -5,6 +5,7 @@ body {
   font-family: 'Commissioner', sans-serif,'Fraunces', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #4B2A0F;
 }
 
 code {
