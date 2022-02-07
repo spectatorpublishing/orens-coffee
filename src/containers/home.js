@@ -189,6 +189,15 @@ const Line = styled.span`
     height: 1px;
 `;
 
+const Link = styled.span`
+    color: ${theme.colors.coffee};
+    cursor: pointer;
+    :hover {
+        color: ${theme.colors.wine};
+    }
+    text-decoration-line: underline;
+`;
+
 export default function Home() {
 
 	const [ explore, setExplore ] = useState(false)
@@ -281,13 +290,15 @@ export default function Home() {
                 
                 <Row>
                     <Line></Line>
-                    <Logo>
-                        <img src="https://sbs-assets.s3.amazonaws.com/orens-coffee/Screen+Shot+2022-01-31+at+11.38.56+PM.png" alt="Oren's logo"/>
-                    </Logo>
+                    <a href="https://orenscoffee.com/" target="_blank">
+                        <Logo>
+                            <img src="https://sbs-assets.s3.amazonaws.com/orens-coffee/Screen+Shot+2022-01-31+at+11.38.56+PM.png" alt="Oren's logo"/>
+                        </Logo>
+                    </a>
                     <Line></Line>
                 </Row>
 
-                <SmallHeading>Sponsored content with Oren’s Coffee</SmallHeading>
+                <SmallHeading>Sponsored content with <a href="https://orenscoffee.com/" target="_blank" ><Link>Oren’s Coffee</Link></a></SmallHeading>
 
                 <Body>
                     Oren’s Coffee is a New York City-based specialty coffee chain focused on providing its customers with the highest 
