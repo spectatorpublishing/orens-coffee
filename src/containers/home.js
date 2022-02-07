@@ -5,6 +5,10 @@ import theme from '../theme';
 
 const HomeContainer = styled.div`
     background-color: ${theme.colors.cream};
+
+    a {
+        color: ${theme.colors.coffee};
+    }
 `;
 
 const MainImage = styled.div`
@@ -109,9 +113,11 @@ const Home = () => (
         </MainImage>
 
         <HomeContent>
+            <a href="/explore">
             <Subtitle> 
                 Start Your Journey Here
             </Subtitle>
+            </a>
 
             <Body>
                 <Capital>C</Capital>offee is complicated, but not for the average person looking to grab a morning energy boost 
