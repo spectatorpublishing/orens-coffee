@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { device } from '../device';
+// import { device } from '../device';
 import theme from '../theme';
 import Explore from './explore'
 
@@ -17,12 +17,13 @@ const MainImage = styled.div`
         width: 100vw;
         height: 100vh;
         object-fit: cover;
+        /* @media (max-width: ${theme.sizes.tablet}) {
+            height: auto;
+        } */
     }
     justify-content: center;
     vertical-align: middle;
-
     align-items: center;
-
 
     /* @media (max-width: ${theme.sizes.tablet}) {
         align-items: center
@@ -62,6 +63,14 @@ const Spacer = styled.div`
     height: 2rem;
 `;
 
+const Down = styled.div`
+    position: absolute;
+    bottom: 2rem;
+    color: ${theme.colors.cream};
+    font-size: 4rem;
+    font-weight: bold;
+`;
+
 const HomeContent = styled.div`
     color: ${theme.colors.coffee};
     padding: 4rem 0rem 6rem 0rem;
@@ -87,6 +96,30 @@ const ExploreButton = styled.div`
     font-family: 'Fraunces', serif;
     font-weight: bold;
     margin: 0 auto 4rem auto;
+    cursor: pointer;
+    color: ${theme.colors.cream};
+
+    :hover {
+        background: ${theme.colors.wine};
+    }
+
+    @media (max-width: ${theme.sizes.tablet}) {
+        font-size: 2.5rem;
+    }
+    @media (max-width: ${theme.sizes.mobile}) {
+        font-size: 1.5rem;
+    }
+`;
+
+const ExploreButtonSmall = styled.div`
+    padding: 1rem 1.5rem 1.5rem 1.5rem; 
+    border-radius: 2rem;
+    display: inline-block;
+    background: ${theme.colors.blue};
+    font-size: 2rem;
+    font-family: 'Fraunces', serif;
+    font-weight: bold;
+    margin: 4rem 0 2rem 0;
     cursor: pointer;
     color: ${theme.colors.cream};
 
@@ -201,12 +234,18 @@ const Link = styled.span`
 export default function Home() {
 
 	const [ explore, setExplore ] = useState(false)
-	const toggle = () => setExplore(!explore)
+	const exploreOn = () => setExplore(true)
+	const exploreOff = () => setExplore(false)
+
+    const exploreScroll = () => {
+        setExplore(true)
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+    }
        
     return (
         <HomeContainer>
 
-            { explore? <Explore onClick={toggle}/> :       
+            { explore? <Explore onClick={exploreOff}/> :       
             <MainImage>
                 <img src="https://sbs-assets.s3.amazonaws.com/orens-coffee/24298B46-EA61-4280-9591-0FA6FE035C07.gif" alt="World map with highlighted coffee regions"/>
                 <Title>
@@ -214,11 +253,12 @@ export default function Home() {
                     <BottomText>Your Coffee’s World-Class Journey</BottomText> 
                     <Spacer></Spacer>               
                     <ButtonWrap>                
-                    <ExploreButton onClick={toggle} > 
+                    <ExploreButton onClick={exploreOn} > 
                         Start Your Journey Here
                     </ExploreButton>
                 </ButtonWrap>  
                 </Title>   
+                <Down> ∨ </Down>
            
 
             </MainImage> }
@@ -287,6 +327,12 @@ export default function Home() {
                     and the result is a sub-optimal cup of joe. After roasting is complete, the coffee is transported to a roastery’s 
                     customer or their own coffee shop and is ready to be brewed and served.
                 </Body>
+
+                <ButtonWrap>                
+                    <ExploreButtonSmall onClick={exploreScroll} > 
+                        Start Your Journey Here
+                    </ExploreButtonSmall>
+                </ButtonWrap>  
                 
                 <Row>
                     <Line></Line>

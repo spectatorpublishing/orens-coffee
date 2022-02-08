@@ -41,6 +41,9 @@ const Map = styled.img`
 	width: 100vw;
 	height: 100vh;
 	object-fit: cover;
+	/* @media (max-width: ${theme.sizes.tablet}) {
+            height: auto;
+    } */
 `
 
 const BackButton = styled.div`
@@ -56,6 +59,7 @@ const BackButton = styled.div`
 
 const PinImage = styled.img`
 	position: absolute;
+	cursor: pointer;
 	width: 2.6%;
 	left: ${props => `${props.xCord}px`};
 	top: ${props => `${props.yCord}px`};
