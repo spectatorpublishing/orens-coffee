@@ -75,6 +75,22 @@ const Modal = styled.div`
 	z-index: 998;
 	background-color: transparent;
 `
+const Down = styled.div`
+    position: absolute;
+    bottom: 1rem;
+    color: ${theme.colors.cream};
+    font-size: 3rem;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	text-align: center;
+`;
+
+const Scroll = styled.span`
+    font-size: 2rem;
+    font-weight: normal;
+`;
 
 // placeholder, to be replaced with the actual card
 const Card = styled.div`
@@ -133,11 +149,11 @@ export default function Explore(props) {
 		<>
 			<BackButton onClick={props.onClick}> {"< BACK"} </BackButton>
 			<Map src={map.url} />
-
 			<Kenya xCord={marks.kenya[0]} yCord={marks.kenya[1]} />
 			<Manita xCord={marks.manita[0]} yCord={marks.manita[1]} />
 			<Sumatra xCord={marks.sumatra[0]} yCord={marks.sumatra[1]} />
 			<NYC xCord={marks.nyc[0]} yCord={marks.nyc[1]} />
+			<Down> ∨ <Scroll> SCROLL </Scroll> ∨ </Down>
 		</>
 	)
 }

@@ -65,10 +65,14 @@ const Spacer = styled.div`
 
 const Down = styled.div`
     position: absolute;
-    bottom: 2rem;
+    bottom: 1rem;
     color: ${theme.colors.cream};
-    font-size: 4rem;
-    font-weight: bold;
+    font-size: 3rem;
+`;
+
+const Scroll = styled.span`
+    font-size: 2rem;
+    font-weight: normal;
 `;
 
 const HomeContent = styled.div`
@@ -234,12 +238,10 @@ const Link = styled.span`
 export default function Home() {
 
 	const [ explore, setExplore ] = useState(false)
-	const exploreOn = () => setExplore(true)
 	const exploreOff = () => setExplore(false)
-
-    const exploreScroll = () => {
+    const exploreOn = () => {
         setExplore(true)
-        document.body.scrollTop = document.documentElement.scrollTop = 0;
+        window.scrollTo({top: 0, behavior: 'smooth'});
     }
        
     return (
@@ -258,7 +260,7 @@ export default function Home() {
                     </ExploreButton>
                 </ButtonWrap>  
                 </Title>   
-                <Down> ∨ </Down>
+                <Down> ∨ <Scroll> SCROLL </Scroll> ∨ </Down>
            
 
             </MainImage> }
@@ -329,7 +331,7 @@ export default function Home() {
                 </Body>
 
                 <ButtonWrap>                
-                    <ExploreButtonSmall onClick={exploreScroll} > 
+                    <ExploreButtonSmall onClick={exploreOn} > 
                         Start Your Journey Here
                     </ExploreButtonSmall>
                 </ButtonWrap>  
