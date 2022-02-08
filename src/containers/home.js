@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 // import { device } from '../device';
 import theme from '../theme';
+import CoffeeCard from '../components/coffee-card';
 import Explore from './explore'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
