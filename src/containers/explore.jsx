@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import { cover } from 'intrinsic-scale';
 import theme from '../theme';
 import useWindowDimensions from '../hooks/window.js'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
 const redPinUrl = "https://sbs-assets.s3.amazonaws.com/orens-coffee/pushpin+3.png"
 const map = {
@@ -49,8 +52,8 @@ const Map = styled.img`
 const BackButton = styled.div`
 	position: absolute;
     color: ${theme.colors.cream};
-	top: 1rem;
-	left: 1rem;
+	top: 2rem;
+	left: 2rem;
 	cursor: pointer;
 	font-family: 'Commissioner', serif;
     font-weight: normal;
@@ -79,17 +82,12 @@ const Down = styled.div`
     position: absolute;
     bottom: 1rem;
     color: ${theme.colors.cream};
-    font-size: 3rem;
+    font-size: 5rem;
 	margin-left: auto;
 	margin-right: auto;
 	left: 0;
 	right: 0;
 	text-align: center;
-`;
-
-const Scroll = styled.span`
-    font-size: 2rem;
-    font-weight: normal;
 `;
 
 // placeholder, to be replaced with the actual card
@@ -147,13 +145,13 @@ export default function Explore(props) {
 
 	return (
 		<>
-			<BackButton onClick={props.onClick}> {"< BACK"} </BackButton>
+			<BackButton onClick={props.onClick}><FontAwesomeIcon icon={faChevronLeft}/> Back</BackButton>
 			<Map src={map.url} />
 			<Kenya xCord={marks.kenya[0]} yCord={marks.kenya[1]} />
 			<Manita xCord={marks.manita[0]} yCord={marks.manita[1]} />
 			<Sumatra xCord={marks.sumatra[0]} yCord={marks.sumatra[1]} />
 			<NYC xCord={marks.nyc[0]} yCord={marks.nyc[1]} />
-			<Down> ∨ <Scroll> SCROLL </Scroll> ∨ </Down>
+			<Down><FontAwesomeIcon icon={faChevronDown}/></Down>
 		</>
 	)
 }

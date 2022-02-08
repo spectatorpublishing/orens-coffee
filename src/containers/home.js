@@ -3,6 +3,8 @@ import styled from 'styled-components';
 // import { device } from '../device';
 import theme from '../theme';
 import Explore from './explore'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
 const HomeContainer = styled.div`
     background-color: ${theme.colors.cream};
@@ -67,12 +69,7 @@ const Down = styled.div`
     position: absolute;
     bottom: 1rem;
     color: ${theme.colors.cream};
-    font-size: 3rem;
-`;
-
-const Scroll = styled.span`
-    font-size: 2rem;
-    font-weight: normal;
+    font-size: 5rem;
 `;
 
 const HomeContent = styled.div`
@@ -260,7 +257,7 @@ export default function Home() {
                     </ExploreButton>
                 </ButtonWrap>  
                 </Title>   
-                <Down> ∨ <Scroll> SCROLL </Scroll> ∨ </Down>
+                <Down> <FontAwesomeIcon icon={faChevronDown}/></Down>
            
 
             </MainImage> }
