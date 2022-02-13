@@ -23,36 +23,63 @@ const MainImage = styled.div`
 
 const OrenLogo = styled.div`
     z-index: 1;
-    margin: auto 0rem -9rem -9rem;
+    margin: auto 0rem -5rem -14rem;
     img {
-        width: 80%;
-        height: 80%;
+        width: 70%;
+        height: 70%;
     }
+`;
+
+const OrenText = styled.div`
+    margin: 0rem 1rem 0rem 1rem;
+    font-size: 1 rem;
+    font-family: 'Commissioner', serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1 rem;
+    color: white;
 `;
 
 const ColorBox = styled.div`
     background: ${props => props.color};
-    width: 80%;
+    width: 75%;
     height: 100%;
     padding: 2rem 1rem;
+    border-radius: 2rem;
 `;
 
 const Title = styled.div`
     margin: 0rem 1rem 0rem 1rem;
+    color: ${props => props.color};
+    font-size: 2.5rem;
+    font-family: 'Fraunces', serif;
+    font-weight: bold;
+    padding-bottom: 0.75rem;
 `;
 
 const TextBody = styled.div`
     margin: 0rem 1rem 0rem 13rem;
-   
+    font-size: 1 rem;
+    font-family: 'Commissioner', serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1 rem;
 `;
 
 const TextSectionTitle = styled.div`
-    
+    font-weight: 700;
+    color: ${props => props.color};
    
 `;
 
 const Text = styled.div`
     margin: 0rem 1rem 0rem 1rem;
+    font-size: 1 rem;
+    font-family: 'Commissioner', serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1 rem;
+    color: black;
 `;
 
 const Close = styled.div`
@@ -78,13 +105,12 @@ const RowNoIndent = styled.div`
 `;
 
 const OrensSection = styled.div`
-    margin: 0rem 1rem 0rem 0rem;
+    margin: 0rem 13rem 0rem 0rem;
 `;
 
-const TextSection = ({title, text}) => (
+const TextSection = ({color, title, text}) => (
     <div>
-        <TextSectionTitle>{title}</TextSectionTitle>
-        <Text>{text}</Text>
+        <TextSectionTitle color={color}>{title}</TextSectionTitle> <Text>{text}</Text>
     </div>
 );
 
@@ -94,10 +120,10 @@ const CoffeeCard = ({data, onClose}) => (
         <>
             <ColorBox color={data.backgroundColor}>
                     <RowNoIndent>
-                        <Title>{data.title}</Title>
+                        <Title color={data.textColor}>{data.title}</Title>
                         <Close><FontAwesomeIcon onClick={onClose} icon={faXmark}/></Close>
                     </RowNoIndent>
-                    <OrensSection><Text>{data.text}</Text></OrensSection> 
+                    <OrensSection><OrenText>{data.text}</OrenText></OrensSection> 
             </ColorBox>
             <OrenLogo>
                 <img src={data.image} alt={data.alttext}/>
@@ -109,15 +135,15 @@ const CoffeeCard = ({data, onClose}) => (
             </MainImage>
             <ColorBox color={data.backgroundColor}>
                     <Row>
-                        <Title>{data.title}</Title>
+                        <Title color={data.textColor} >{data.title}</Title>
                         <Close><FontAwesomeIcon onClick={onClose} icon={faXmark}/></Close>
                     </Row>
                     <TextBody>
-                        <TextSection title="Location:" text={data.location}/>
-                        <TextSection title="Flavor:" text={data.flavor}/>
-                        <TextSection title="Best grown In:" text={data.bestGrown}/>
-                        <TextSection title="Processing: " text={data.processing}/>
-                        <TextSection title="Roasting:" text={data.roasting}/>
+                        <TextSection color={data.textColor} title="Location:" text={data.location}/>
+                        <TextSection color={data.textColor} title="Flavor:" text={data.flavor}/>
+                        <TextSection color={data.textColor} title="Best grown In:" text={data.bestGrown}/>
+                        <TextSection color={data.textColor} title="Processing: " text={data.processing}/>
+                        <TextSection color={data.textColor} title="Roasting:" text={data.roasting}/>
                     </TextBody>
             </ColorBox>
         </>}

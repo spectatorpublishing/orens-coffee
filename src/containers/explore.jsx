@@ -101,8 +101,8 @@ const Card = styled.div`
 	top: 50%;
     transform: translate(-50%, -50%);
 	z-index: 999;
-	width: 75vw;
-	height: 50vh;
+	width: 80vw;
+	height: 60vh;
 `
 
 const CardPopUp = ({ cb, children, visible }) => (
