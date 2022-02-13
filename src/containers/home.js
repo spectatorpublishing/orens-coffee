@@ -6,6 +6,8 @@ import CoffeeCard from '../components/coffee-card';
 import Explore from './explore'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import MobileCoffeeCard from '../components/mobile-coffee-card';
+import { coffee_data } from '../data/coffeedata';
 
 const HomeContainer = styled.div`
     background-color: ${theme.colors.cream};
@@ -296,6 +298,8 @@ export default function Home() {
                     thickness), flavor, aromatics, etc. If approved, the roastery then enters the purchasing process.
                 </Body>
 
+                <MobileCoffeeCard data={coffee_data[2]}/>
+
                 <Heading>Purchase and Delivery</Heading>
                 <Body>
                     Purchasing coffee beans is not as easy as it seems. First, the roastery must place an order with a broker, a 
@@ -307,6 +311,8 @@ export default function Home() {
                     them fresh for longer. Once the beans arrive at the roastery’s warehouse, it is usually cupped once more to verify 
                     that they are the ones ordered. From here, the roastery proceeds to roast the beans.
                 </Body>
+
+                <MobileCoffeeCard data={coffee_data[0]}/>
 
                 <Heading>Science of Roasting</Heading>
                 <Body>
@@ -327,6 +333,8 @@ export default function Home() {
                     and the result is a sub-optimal cup of joe. After roasting is complete, the coffee is transported to a roastery’s 
                     customer or their own coffee shop and is ready to be brewed and served.
                 </Body>
+
+                <MobileCoffeeCard data={coffee_data[1]}/>
 
                 <ButtonWrap>                
                     <ExploreButtonSmall onClick={exploreOn} > 
