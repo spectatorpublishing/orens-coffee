@@ -8,9 +8,10 @@ const theme = {
     coffee: "#4B2A0F"
   },
   sizes: {
-    mobile: "768px",
+    mobile: "767px",
     tablet: "992px",
     aboveTablet: "993px",
+    aboveLargeTablet: "1024px",
     desktop: "1200px",
     largeDesktop: "1440px"
   }

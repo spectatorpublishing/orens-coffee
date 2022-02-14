@@ -6,6 +6,8 @@ import CoffeeCard from '../components/coffee-card';
 import Explore from './explore'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import MobileCoffeeCard from '../components/mobile-coffee-card';
+import { coffee_data } from '../data/coffeedata';
 
 const HomeContainer = styled.div`
     background-color: ${theme.colors.cream};
@@ -23,6 +25,14 @@ const MainImage = styled.div`
         /* @media (max-width: ${theme.sizes.tablet}) {
             height: auto;
         } */
+
+        @media (max-width: ${theme.sizes.mobile}) {
+            height: 50vh;
+        }
+    }
+
+    @media (max-width: ${theme.sizes.tablet}) {
+        flex-direction: column;
     }
     justify-content: center;
     vertical-align: middle;
@@ -41,6 +51,7 @@ const Title = styled.div`
     font-size: 5rem;
     font-family: 'Fraunces', serif;
     font-weight: normal;
+    padding: 0.5rem;
 
     @media (min-width: ${theme.sizes.aboveTablet}) {
         /* top: 10vh; */
@@ -49,7 +60,7 @@ const Title = styled.div`
         font-size: 4rem;
     }
     @media (max-width: ${theme.sizes.mobile}) {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
     
 `;
@@ -64,6 +75,10 @@ const BottomText = styled.div`
 
 const Spacer = styled.div`
     height: 2rem;
+
+    @media (max-width: ${theme.sizes.mobile}) {
+        height: 0rem;
+    }
 `;
 
 const Down = styled.div`
@@ -71,6 +86,38 @@ const Down = styled.div`
     bottom: 1rem;
     color: ${theme.colors.cream};
     font-size: 5rem;
+    
+    @media (max-width: ${theme.sizes.mobile}) {
+        display: none;
+    }
+`;
+
+const MobileNotice = styled.div`
+    color: ${theme.colors.cream};
+    font-size: 1rem;
+    margin: -2rem 1rem 0.50rem 1rem;
+    @media (min-width: ${theme.sizes.mobile}) {
+        display: none;
+    }
+
+    @media (max-width: ${theme.sizes.mobile}) {
+        font-size: 0.7rem;
+    }
+`;
+
+const TabletNotice = styled.div`
+    color: ${theme.colors.cream};
+    font-size: 1rem;
+    margin: -2rem 1rem 0.50rem 1rem;
+    display: none;
+
+    @media ((min-width: ${theme.sizes.mobile})) {
+        display: block;
+    }
+
+    @media ((max-width: ${theme.sizes.aboveLargeTablet} - 1)) {
+        display: block;
+    }
 `;
 
 const HomeContent = styled.div`
@@ -80,7 +127,7 @@ const HomeContent = styled.div`
         padding: 4rem 0rem 6rem 0rem;
     }
     @media (max-width: ${theme.sizes.mobile}) {
-        padding: 4rem 0rem 4rem 0rem;
+        padding: 2rem 0rem 4rem 0rem;
     }
 `;
 
@@ -108,8 +155,10 @@ const ExploreButton = styled.div`
     @media (max-width: ${theme.sizes.tablet}) {
         font-size: 2.5rem;
     }
+
     @media (max-width: ${theme.sizes.mobile}) {
-        font-size: 1.5rem;
+        display: none;
+        padding: 0rem; 
     }
 `;
 
@@ -133,7 +182,7 @@ const ExploreButtonSmall = styled.div`
         font-size: 2.5rem;
     }
     @media (max-width: ${theme.sizes.mobile}) {
-        font-size: 1.5rem;
+        display: none;
     }
 `;
 
@@ -257,16 +306,12 @@ export default function Home() {
                         Start Your Journey Here
                     </ExploreButton>
                 </ButtonWrap>  
-                </Title>   
+                </Title>
+                <MobileNotice>For the best experience, check out the web version</MobileNotice>   
+                <TabletNotice>For the best experience, rotate your device</TabletNotice>   
                 <Down> <FontAwesomeIcon icon={faChevronDown}/></Down>
-           
-
             </MainImage> }
-
             <HomeContent>
-
-
-
                 <Body>
                     <Capital>C</Capital>offee is complicated, but not for the average person looking to grab a morning energy boost 
                     before class or work. Roasters and coffee shops have allowed us to easily incorporate coffee drinking into our 
@@ -296,6 +341,8 @@ export default function Home() {
                     thickness), flavor, aromatics, etc. If approved, the roastery then enters the purchasing process.
                 </Body>
 
+                <MobileCoffeeCard data={coffee_data[2]}/>
+
                 <Heading>Purchase and Delivery</Heading>
                 <Body>
                     Purchasing coffee beans is not as easy as it seems. First, the roastery must place an order with a broker, a 
@@ -307,6 +354,8 @@ export default function Home() {
                     them fresh for longer. Once the beans arrive at the roastery’s warehouse, it is usually cupped once more to verify 
                     that they are the ones ordered. From here, the roastery proceeds to roast the beans.
                 </Body>
+
+                <MobileCoffeeCard data={coffee_data[0]}/>
 
                 <Heading>Science of Roasting</Heading>
                 <Body>
@@ -327,6 +376,8 @@ export default function Home() {
                     and the result is a sub-optimal cup of joe. After roasting is complete, the coffee is transported to a roastery’s 
                     customer or their own coffee shop and is ready to be brewed and served.
                 </Body>
+
+                <MobileCoffeeCard data={coffee_data[1]}/>
 
                 <ButtonWrap>                
                     <ExploreButtonSmall onClick={exploreOn} > 
