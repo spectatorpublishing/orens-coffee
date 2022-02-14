@@ -5,12 +5,12 @@ import Explore from './containers/explore.jsx'
 
 const App = () => {
   return (
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <Router basename={process.env.PUBLIC_URL}>
         <Routes>
           <Route path="/explore" element={<Explore />} />
           <Route path="/" element={<Home />} />
         </Routes>
-      </BrowserRouter>
+      </Router>
   );
 }
 
