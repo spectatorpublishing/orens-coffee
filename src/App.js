@@ -7,8 +7,8 @@ const App = () => {
   return (
       <Router basename="https://orenscoffee.columbiaspectator.com">
         <Routes>
-          <Route path="/explore" element={<Explore />} />
-          <Route path="/" element={<Home />} />
+          <Route exact path="/explore" element={<Explore />} />
+          <Route exact path="/" element={<Home />} />
         </Routes>
       </Router>
   );
