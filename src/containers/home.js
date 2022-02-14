@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 // import { device } from '../device';
 import theme from '../theme';
 import CoffeeCard from '../components/coffee-card';
@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import MobileCoffeeCard from '../components/mobile-coffee-card';
 import { coffee_data } from '../data/coffeedata';
+import SBSTopBar from '../components/sbsTopBar';
 
 const HomeContainer = styled.div`
     background-color: ${theme.colors.cream};
@@ -18,6 +19,7 @@ const HomeContainer = styled.div`
 
 const MainImage = styled.div`
     display: flex;
+    width: 100vw;
     img {
         width: 100vw;
         height: 100vh;
@@ -51,6 +53,7 @@ const Title = styled.div`
     font-size: 5rem;
     font-family: 'Fraunces', serif;
     font-weight: normal;
+    margin-top: 1rem;
     padding: 0.5rem;
 
     @media (min-width: ${theme.sizes.aboveTablet}) {
@@ -282,6 +285,13 @@ const Link = styled.span`
     text-decoration-line: underline;
 `;
 
+const TopBar = styled.div`
+    display: flex;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+`;
+
 export default function Home() {
 
 	const [ explore, setExplore ] = useState(false)
@@ -293,8 +303,13 @@ export default function Home() {
        
     return (
         <HomeContainer>
-
-            { explore? <Explore onClick={exploreOff}/> :       
+            <TopBar>
+            <SBSTopBar 
+                companyLogo="http://orenscoffee.com/wp-content/uploads/2021/04/footer.png"
+                articleURL="https://orenscoffee.columbiaspectator.com"
+                headline="Bean to Beverage: Your Coffee’s World-Class Journey"/>
+            </TopBar>
+            { explore ? <Explore onClick={exploreOff}/> :       
             <MainImage>
                 <img src="https://sbs-assets.s3.amazonaws.com/orens-coffee/24298B46-EA61-4280-9591-0FA6FE035C07.gif" alt="World map with highlighted coffee regions"/>
                 <Title>

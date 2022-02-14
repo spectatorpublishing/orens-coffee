@@ -52,7 +52,7 @@ const Map = styled.img`
 const BackButton = styled.div`
 	position: absolute;
     color: ${theme.colors.cream};
-	top: 2rem;
+	top: 5rem;
 	left: 2rem;
 	cursor: pointer;
 	font-family: 'Commissioner', serif;
@@ -118,7 +118,7 @@ const TabletNotice = styled.div`
 const BannerText = styled.div`
 	position: absolute;
 	left: 50%;
-	top: 10%;
+	top: 20%;
 	transform: translate(-50%, -40%);
 	z-index: 999;
     color: ${theme.colors.cream};
@@ -165,9 +165,9 @@ const CardPopUp = ({ cb, children, visible }) => (
 // pops up at the center of the page and can be toggled
 // clicking the background (i.e the transparent Modal
 // component covering the entire view).
-const withCard = Card => ({ xCord, yCord, location }) => {
+const withCard = Card => ({ xCord, yCord, location, setBannerVisible}) => {
 	const [ visible, setVisible ] = useState(false)
-	const toggle = () => setVisible(!visible)
+	const toggle = () => setVisible(!visible) & setBannerVisible(false);
 
 	return (
 		<>
@@ -198,6 +198,7 @@ const Sumatra = withCard(Card)
 const NYC = withCard(Card)
 
 export default function Explore(props) {
+	const [ isBannerVisible, setBannerVisible] = useState(true);
 	const { width: vw, height: vh } = useWindowDimensions();
 	const { width: iw, height: ih, x, y } = cover(vw, vh, map.width, map.height)
 	const marks = computeLocation(iw, ih, x, y)
@@ -206,12 +207,12 @@ export default function Explore(props) {
 		<>
 			<BackButton onClick={props.onClick}><FontAwesomeIcon icon={faChevronLeft}/> Back</BackButton>
 			<TabletNotice>For the best experience, rotate your device<FontAwesomeIcon icon={faRotateRight}/></TabletNotice>
-			<BannerText>Click on a red pin to explore!</BannerText>
+			{ isBannerVisible ? <BannerText>Click on a red pin to explore!</BannerText> : null}
 			<Map src={map.url} />
-			<Kenya xCord={marks.kenya[0]} yCord={marks.kenya[1]} location="Kenya" />
-			<Manita xCord={marks.manita[0]} yCord={marks.manita[1]} location="Manita"/>
-			<Sumatra xCord={marks.sumatra[0]} yCord={marks.sumatra[1]} location="Sumatra"/>
-			<NYC xCord={marks.nyc[0]} yCord={marks.nyc[1]} location="NYC"/>
+			<Kenya xCord={marks.kenya[0]} yCord={marks.kenya[1]} location="Kenya" setBannerVisible={setBannerVisible}/>
+			<Manita xCord={marks.manita[0]} yCord={marks.manita[1]} location="Manita" setBannerVisible={setBannerVisible}/>
+			<Sumatra xCord={marks.sumatra[0]} yCord={marks.sumatra[1]} location="Sumatra" setBannerVisible={setBannerVisible}/>
+			<NYC xCord={marks.nyc[0]} yCord={marks.nyc[1]} location="NYC" setBannerVisible={setBannerVisible}/>
 			<Down><FontAwesomeIcon icon={faChevronDown}/></Down>
 		</>
 	)
