@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "https://spectatorpublishing.github.io/orens-coffee/static/css/main.9cda992f.css",
-    "main.js": "https://spectatorpublishing.github.io/orens-coffee/static/js/main.9b3e9410.js",
-    "static/js/787.64818b87.chunk.js": "https://spectatorpublishing.github.io/orens-coffee/static/js/787.64818b87.chunk.js",
-    "index.html": "https://spectatorpublishing.github.io/orens-coffee/index.html",
-    "main.9cda992f.css.map": "https://spectatorpublishing.github.io/orens-coffee/static/css/main.9cda992f.css.map",
-    "main.9b3e9410.js.map": "https://spectatorpublishing.github.io/orens-coffee/static/js/main.9b3e9410.js.map",
-    "787.64818b87.chunk.js.map": "https://spectatorpublishing.github.io/orens-coffee/static/js/787.64818b87.chunk.js.map"
+    "main.css": "https://orenscoffee.columbiaspectator.com/static/css/main.9cda992f.css",
+    "main.js": "https://orenscoffee.columbiaspectator.com/static/js/main.960a7bd9.js",
+    "static/js/787.64818b87.chunk.js": "https://orenscoffee.columbiaspectator.com/static/js/787.64818b87.chunk.js",
+    "index.html": "https://orenscoffee.columbiaspectator.com/index.html",
+    "main.9cda992f.css.map": "https://orenscoffee.columbiaspectator.com/static/css/main.9cda992f.css.map",
+    "main.960a7bd9.js.map": "https://orenscoffee.columbiaspectator.com/static/js/main.960a7bd9.js.map",
+    "787.64818b87.chunk.js.map": "https://orenscoffee.columbiaspectator.com/static/js/787.64818b87.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9cda992f.css",
-    "static/js/main.9b3e9410.js"
+    "static/js/main.960a7bd9.js"
   ]
 }
