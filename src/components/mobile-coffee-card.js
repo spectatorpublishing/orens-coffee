@@ -10,6 +10,7 @@ const CardContainer = styled.div`
     flex-direction: column;
     width: 100%;
     height: 100%;
+
     @media (min-width: ${theme.sizes.mobile}) {
         display: none;
     }
@@ -72,7 +73,7 @@ const TextSectionTitle = styled.div`
 `;
 
 const Text = styled.div`
-    margin: 0rem 1rem 0rem 1rem;
+    margin: 0rem 1rem 1rem 0rem;
     font-size: 1 rem;
     font-family: 'Commissioner', serif;
     font-style: normal;

@@ -23,10 +23,11 @@ const MainImage = styled.div`
 
 const OrenLogo = styled.div`
     z-index: 1;
-    margin: auto 0rem -5rem -14rem;
+    margin: auto 1rem 0rem 1rem;
+    max-width: 15rem;
+    height: fit-content;
     img {
-        width: 70%;
-        height: 70%;
+        max-width: 15rem;
     }
 `;
 
@@ -38,6 +39,7 @@ const OrenText = styled.div`
     font-weight: normal;
     line-height: 1 rem;
     color: white;
+    height: fit-content;
 `;
 
 const ColorBox = styled.div`
@@ -46,6 +48,7 @@ const ColorBox = styled.div`
     height: 100%;
     padding: 2rem 1rem;
     border-radius: 2rem;
+    margin: 0rem auto 0rem auto;
 `;
 
 const Title = styled.div`
@@ -55,6 +58,7 @@ const Title = styled.div`
     font-family: 'Fraunces', serif;
     font-weight: bold;
     padding-bottom: 0.75rem;
+    width: fit-content;
 `;
 
 const TextBody = styled.div`
@@ -73,7 +77,7 @@ const TextSectionTitle = styled.div`
 `;
 
 const Text = styled.div`
-    margin: 0rem 1rem 0rem 1rem;
+    margin: 0rem 1rem 0.5rem 0rem;
     font-size: 1 rem;
     font-family: 'Commissioner', serif;
     font-style: normal;
@@ -104,8 +108,16 @@ const RowNoIndent = styled.div`
     margin: 0rem 0rem 0rem 0rem;
 `;
 
+const Column = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin: 0rem 0rem 0rem 0rem;
+    width: fit-content;
+`;
+
 const OrensSection = styled.div`
-    margin: 0rem 13rem 0rem 0rem;
+    margin: 0rem 1rem 0rem 0rem;
+    height: fit-content;
 `;
 
 const TextSection = ({color, title, text}) => (
@@ -119,15 +131,20 @@ const CoffeeCard = ({data, onClose}) => (
         {(data.title === "Oren's Coffee")? 
         <>
             <ColorBox color={data.backgroundColor}>
-                    <RowNoIndent>
-                        <Title color={data.textColor}>{data.title}</Title>
-                        <Close><FontAwesomeIcon onClick={onClose} icon={faXmark}/></Close>
+                        <Column>
+                        <RowNoIndent>
+                            <Title color={data.textColor}>{data.title}</Title>
+                            <Close><FontAwesomeIcon onClick={onClose} icon={faXmark}/></Close>
+                        </RowNoIndent>
+                        <RowNoIndent>   
+                            <OrensSection><OrenText>{data.text}</OrenText></OrensSection>
+                        <OrenLogo>
+                            <img src={data.image} alt={data.alttext}/>
+                        </OrenLogo>
                     </RowNoIndent>
-                    <OrensSection><OrenText>{data.text}</OrenText></OrensSection> 
+                    </Column>
             </ColorBox>
-            <OrenLogo>
-                <img src={data.image} alt={data.alttext}/>
-            </OrenLogo>
+            
         </> :
         <>
             <MainImage>

@@ -4,7 +4,7 @@ import { cover } from 'intrinsic-scale';
 import theme from '../theme';
 import useWindowDimensions from '../hooks/window.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft, faRotateRight } from '@fortawesome/free-solid-svg-icons';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import CoffeeCard from '../components/coffee-card';
 import { coffee_data } from '../data/coffeedata';
@@ -47,9 +47,6 @@ const Map = styled.img`
 	width: 100vw;
 	height: 100vh;
 	object-fit: cover;
-	/* @media (max-width: ${theme.sizes.tablet}) {
-            height: auto;
-    } */
 `
 
 const BackButton = styled.div`
@@ -93,6 +90,52 @@ const Down = styled.div`
 	text-align: center;
 `;
 
+const TabletNotice = styled.div`
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 999;
+    color: ${theme.colors.cream};
+    font-size: 4rem;
+    margin: auto auto auto auto;
+	text-align: center;
+
+	svg {
+		font-size: 3rem;
+		margin: 0rem 1rem 0rem 1rem;
+	}
+
+	@media (min-width: ${theme.sizes.aboveLargeTablet}) {
+        display: none;
+    }
+
+	@media (height: 1366px) {
+        display: block;
+    }
+`;
+
+const BannerText = styled.div`
+	position: absolute;
+	left: 50%;
+	top: 10%;
+	transform: translate(-50%, -40%);
+	z-index: 999;
+    color: ${theme.colors.cream};
+    font-size: 3rem;
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+	text-align: center;
+
+	@media (max-width: 1023px) {
+        display: none;
+    }
+
+	@media (height: 1366px) {
+        display: none;
+    }
+`;
+
 // placeholder, to be replaced with the actual card
 const Card = styled.div`
 	display: ${props => props.visible ? "block" : "none"};
@@ -102,7 +145,13 @@ const Card = styled.div`
     transform: translate(-50%, -50%);
 	z-index: 999;
 	width: 80vw;
-	height: 60vh;
+	height: fit-content;
+
+	@media (min-width: ${theme.sizes.aboveLargeTablet}) {
+		width: 90vw;
+		min-height: 60vh;
+		height: fit-content;
+    }
 `
 
 const CardPopUp = ({ cb, children, visible }) => (
@@ -156,6 +205,8 @@ export default function Explore(props) {
 	return (
 		<>
 			<BackButton onClick={props.onClick}><FontAwesomeIcon icon={faChevronLeft}/> Back</BackButton>
+			<TabletNotice>For the best experience, rotate your device<FontAwesomeIcon icon={faRotateRight}/></TabletNotice>
+			<BannerText>Click on a red pin to explore!</BannerText>
 			<Map src={map.url} />
 			<Kenya xCord={marks.kenya[0]} yCord={marks.kenya[1]} location="Kenya" />
 			<Manita xCord={marks.manita[0]} yCord={marks.manita[1]} location="Manita"/>
