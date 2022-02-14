@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/orens-coffee/static/css/main.9cda992f.css",
+    "main.js": "/orens-coffee/static/js/main.757e2a57.js",
+    "static/js/787.64818b87.chunk.js": "/orens-coffee/static/js/787.64818b87.chunk.js",
+    "index.html": "/orens-coffee/index.html",
+    "main.9cda992f.css.map": "/orens-coffee/static/css/main.9cda992f.css.map",
+    "main.757e2a57.js.map": "/orens-coffee/static/js/main.757e2a57.js.map",
+    "787.64818b87.chunk.js.map": "/orens-coffee/static/js/787.64818b87.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9cda992f.css",
+    "static/js/main.757e2a57.js"
+  ]
+}
