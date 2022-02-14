@@ -5,12 +5,12 @@ import Explore from './containers/explore.jsx'
 
 const App = () => {
   return (
-      <HashRouter basename="https://orenscoffee.columbiaspectator.com">
+      <Router basename="https://orenscoffee.columbiaspectator.com/">
         <Routes>
           <Route exact path="/explore" element={<Explore />} />
           <Route exact path="/" element={<Home />} />
         </Routes>
-      </HashRouter>
+      </Router>
   );
 }
 
