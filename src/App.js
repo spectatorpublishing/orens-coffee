@@ -5,7 +5,7 @@ import Explore from './containers/explore.jsx'
 
 const App = () => {
   return (
-      <Router basename="https://orenscoffee.columbiaspectator.com/">
+      <Router basename={process.env.PUBLIC_URL}>
         <Routes>
           <Route exact path="/explore" element={<Explore />} />
           <Route exact path="/" element={<Home />} />
