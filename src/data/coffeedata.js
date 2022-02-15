@@ -8,10 +8,10 @@ export const coffee_data = [
         color2: "#56800B",
         textColor: "#BA4F64",
         location: "Nakuru, Kenya",
-        flavor: "When drinking Kenyan coffee, expect an intense aroma, strong notes of wine, brightness, sweetness, and a rich body. A high quality Kenyan coffee should also have notes of raspberries and black currant.",
-        bestGrown: "These beans are best when grown at high altitudes (5500 to 6000 feet above sea level). Because coffee beans mature slower at high altitudes, Kenyan beans are sweeter than other beans in the Arabica family.",
+        flavor: "When drinking Kenyan coffee, expect an intense aroma, strong wine-like flavors, brightness, sweetness, and a rich body. A high quality Kenyan coffee should also have notes of raspberries and black currant.",
+        bestGrown: "These beans are best when grown at high altitudes of 5,500 to 6,000 feet above sea level. Because coffee beans mature slower at high altitudes, Kenyan beans are sweeter than other beans in the Arabica family.",
         processing: "Kenyan coffee beans are fully washed; the skin is removed, and the beans are soaked in water to remove the mucilage layer. Finally, the beans are dried either in the sun or mechanically.",
-        roasting: "Kenyan coffee beans are taken to a dark roast but less dark than a Sumatra. The beans are very hard and require roasting at a higher temperature."
+        roasting: "To reach the desired profile, Kenyan coffee beans require special treatment. The beans are very hard and are roasted at a higher temperature compared to some other varieties, but not as dark as a Sumatra."
     },
     {
         title:"La Manita",
@@ -22,10 +22,10 @@ export const coffee_data = [
         color2: "rgba(232, 120, 255, 0.99)",
         textColor: "#355A9E",
         location: "Terazu, Costa Rica",
-        flavor: "La Manita coffee is a well-balanced coffee popular for its smoothness and hints of nuttiness. It has a medium body with brilliant acidity, and sweet flavors of citrus, caramelized sugar, and creamy chocolate.",
-        bestGrown: "High quality La Manita coffee beans are grown in Terazu, Costa Rica at 5200 to 6000 feet above sea level where volcanic soil is abundant.",
-        processing: "La Manita beans are fully washed; the skin is removed, and the beans are soaked in water to remove the mucilage layer. Finally, the beans are dried either in the sun for quality or mechanically for efficiency.",
-        roasting: "La Manita, like Kenyan coffee, is classified as a dark roast coffee and needs high temperatures to fully draw out its complex flavors."
+        flavor: "La Minita Tarrazu coffee is a well-balanced coffee popular for its smoothness and hints of nuttiness. It has a medium body with brilliant acidity, and sweet flavors of citrus, caramelized sugar, and creamy chocolate.",
+        bestGrown: "High quality La Minita Tarrazu coffee beans are grown in Terrazu, Costa Rica at 5,200 to 6,000 feet above sea level, where volcanic soil is abundant.",
+        processing: "La Minita Tarrazu beans are fully washed; the skin is removed and the beans are soaked in water to remove the mucilage layer. Finally, the beans are dried either in the sun for quality or mechanically for efficiency.",
+        roasting: "La Minita Tarrazu, like Kenyan coffee, needs to be roasted at high temperatures to fully draw out its complex flavors. "
     },
     {
         title:"Sumatra",
@@ -50,6 +50,9 @@ export const orens_info = [
         image: "https://sbs-assets.s3.amazonaws.com/orens-coffee/Screen+Shot+2022-01-31+at+11.38.56+PM.png" ,
         alttext:"Illustration of a bottle of wine in front of a valley",
         backgroundColor: "linear-gradient(179.19deg, #FFFAF4 -31.63%, #3E6280 95.66%);",
-        text: "Founder Oren Bloostein opened his first store in New York City in 1986, personally sourcing the best beans from around the world and researching the best roasting methods for each of his batches. 36 years later, Oren insists that has not changed today. Bloostein's expertise in coffee roasting has won him many awards and much respect as one of the world's leading authorities on coffee, and this can be seen, or rather, tasted, in each cup of coffee. \n\nOren's Coffee understands that roasteries cannot exist without coffee farmers, so they are committed to paying farmers fairly for each crop. This allows farmers to reliably produce high quality crops year after year, which ultimately end up at Oren's Coffee's New Jersey roastery. Dedication to fair sourcing and attention to detail in roasting cement Oren's Coffee as one of New York City's most beloved roasters." 
+        text: [
+            "Founder Oren Bloostein opened his first store in New York City in 1986, personally sourcing the best beans from around the world and researching the best roasting methods for each of his batches. 36 years later, Oren insists that has not changed today. Bloostein's expertise in coffee roasting has won him many awards and much respect as one of the world's leading authorities on coffee, and this can be seen, or rather, tasted, in each cup of coffee.",
+            "\n\nOren's Coffee understands that roasteries cannot exist without coffee farmers, so they are committed to paying farmers fairly for each crop. This allows farmers to reliably produce high quality crops year after year, which ultimately end up at Oren's Coffee's New Jersey roastery. Dedication to fair sourcing and attention to detail in roasting cement Oren's Coffee as one of New York City's most beloved roasters." 
+        ]
     }
 ];

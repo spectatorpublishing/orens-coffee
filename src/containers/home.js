@@ -347,27 +347,14 @@ export default function Home() {
 
                 <Heading>Coffee Selection</Heading>
                 <Body>
-                    Coffee beans from different regions taste differently, so roasteries typically start by looking at farms in regions 
-                    that produce a specific type of bean. For example, if a roastery is looking to add a La Manita coffee to their 
-                    line of products, the first place to look would be Costa Rica as it grows best there. When choosing a farm, crop 
-                    quality is not the only thing that is factored into the equation. It is also best practice for roasteries to source 
-                    beans from farms that pay their farmers a fair wage. After selecting a farm, roasteries will test the quality of 
-                    the crop by “cupping” a sample, which simply means tasting a coffee for its body (a measure of mouth feel, think 
-                    thickness), flavor, aromatics, etc. If approved, the roastery then enters the purchasing process.
+                    Coffee beans from different regions taste different, so roasteries typically start by looking for farms that produce a specific type of bean. For example, if a roastery is looking to add a La Minita Tarrazu coffee to their line of products, the first place to look would be Tarrazu, Costa Rica, the only location where the variety can be found. When choosing a farm, crop quality is not the only metric that is factored into the equation. It is also best practice for roasteries to source beans from farms that pay their workers a living wage. After selecting a farm, roasteries will test the quality of the crop by “cupping” a sample, which simply means tasting a coffee for its body (a measure of mouth feel—think thickness), flavor, aromatics, etc. If approved, the roastery then enters the purchasing process.
                 </Body>
 
                 <MobileCoffeeCard data={coffee_data[2]}/>
 
                 <Heading>Purchase and Delivery</Heading>
                 <Body>
-                    Purchasing coffee beans is not as easy as it seems. First, the roastery must place an order with a broker, a 
-                    middleman that facilitates communication and sales between the farmer and roastery. Once an agreement on price has 
-                    been reached, the broker makes a contract with the farm and an exporter to arrange for delivery to the roastery’s 
-                    warehouse. Before the coronavirus pandemic, international delivery via plane was fairly efficient and routes were 
-                    well established. However, logistical complications associated with the pandemic have seen delays in delivery. To 
-                    combat this, coffee exporters worldwide have started using bags designed to let the coffee beans “breathe,” keeping 
-                    them fresh for longer. Once the beans arrive at the roastery’s warehouse, it is usually cupped once more to verify 
-                    that they are the ones ordered. From here, the roastery proceeds to roast the beans.
+                    Purchasing coffee beans is not as easy as it seems. First, the roastery must place an order with a broker, a middleman that facilitates communication and sales between the farmer and roastery. Once an agreement on price has been reached, the broker makes a contract with the farm and an exporter to arrange for delivery to the roastery’s warehouse. Almost all international transportation of beans is done by ship and is moved quickly to preserve freshness. However, logistical complications associated with the pandemic have led to delays in delivery. Fortunately, new bags used to hold beans during shipping allow the beans to “breathe,” keeping them fresh for longer. Once the beans arrive at the roastery’s warehouse, they are usually cupped once more to verify that they are the ones ordered. From here, the roastery proceeds to roast the beans.
                 </Body>
 
                 <MobileCoffeeCard data={coffee_data[0]}/>

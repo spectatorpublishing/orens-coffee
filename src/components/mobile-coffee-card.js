@@ -66,19 +66,20 @@ const TextBody = styled.div`
     margin: 2rem 2rem 0rem 2rem;
 `;
 
-const TextSectionTitle = styled.div`
+const TextSectionTitle = styled.span`
     font-weight: 700;
     color: ${props => props.color};
-   
+    line-height: 1.5rem;
+    font-family: 'Fraunces', serif;
 `;
 
 const Text = styled.div`
-    margin: 0rem 1rem 1rem 0rem;
+    margin: 0rem 1rem 0.5rem 0rem;
     font-size: 1 rem;
     font-family: 'Commissioner', serif;
     font-style: normal;
     font-weight: normal;
-    line-height: 1 rem;
+    line-height: 1.5rem;
     color: black;
 `;
 
@@ -105,7 +106,7 @@ const RowNoIndent = styled.div`
 
 const TextSection = ({color, title, text}) => (
     <div>
-        <TextSectionTitle color={color}>{title}</TextSectionTitle> <Text>{text}</Text>
+        <Text><TextSectionTitle color={color}>{title}</TextSectionTitle>{text}</Text>
     </div>
 );
 
@@ -120,11 +121,11 @@ const MobileCoffeeCard = ({data}) => (
                 <img src={data.image} alt={data.alttext}/>
             </MainImage>
             <TextBody>
-                <TextSection color={data.textColor} title="Location:" text={data.location}/>
-                <TextSection color={data.textColor} title="Flavor:" text={data.flavor}/>
-                <TextSection color={data.textColor} title="Best grown In:" text={data.bestGrown}/>
+                <TextSection color={data.textColor} title="Location: " text={data.location}/>
+                <TextSection color={data.textColor} title="Flavor: " text={data.flavor}/>
+                <TextSection color={data.textColor} title="Best grown In: " text={data.bestGrown}/>
                 <TextSection color={data.textColor} title="Processing: " text={data.processing}/>
-                <TextSection color={data.textColor} title="Roasting:" text={data.roasting}/>
+                <TextSection color={data.textColor} title="Roasting: " text={data.roasting}/>
             </TextBody>
         </ColorBox>
         <SectionColorTransition2 color={data.color2}></SectionColorTransition2>
