@@ -14,14 +14,14 @@ export const coffee_data = [
         roasting: "To reach the desired profile, Kenyan coffee beans require special treatment. The beans are very hard and are roasted at a higher temperature compared to some other varieties, but not as dark as a Sumatra."
     },
     {
-        title:"La Manita",
+        title:"La Manita Tarrazu",
         image: "https://sbs-assets.s3.amazonaws.com/orens-coffee/65BF7EEC-C937-46FD-B2C5-5B1403504381.png" ,
         alttext:"Illustration of coffe beans in a basket with a costa rican ranch in the back",
         backgroundColor: "linear-gradient(180deg, #D1E6FF 17.71%, rgba(232, 120, 255, 0.99) 100%)",
         color1: "#D1E6FF",
         color2: "rgba(232, 120, 255, 0.99)",
         textColor: "#355A9E",
-        location: "Terazu, Costa Rica",
+        location: "Tarrazu, Costa Rica",
         flavor: "La Minita Tarrazu coffee is a well-balanced coffee popular for its smoothness and hints of nuttiness. It has a medium body with brilliant acidity, and sweet flavors of citrus, caramelized sugar, and creamy chocolate.",
         bestGrown: "High quality La Minita Tarrazu coffee beans are grown in Terrazu, Costa Rica at 5,200 to 6,000 feet above sea level, where volcanic soil is abundant.",
         processing: "La Minita Tarrazu beans are fully washed; the skin is removed and the beans are soaked in water to remove the mucilage layer. Finally, the beans are dried either in the sun for quality or mechanically for efficiency.",

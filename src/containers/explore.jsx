@@ -133,7 +133,7 @@ const BannerText = styled.div`
 	left: 50%;
 	top: 20%;
 	transform: translate(-50%, -40%);
-	z-index: 999;
+	z-index: 800;
     color: ${theme.colors.cream};
     font-size: 3rem;
     font-family: 'Fraunces', serif;

@@ -130,7 +130,7 @@ const InfoPopUp = styled.div`
     display: none;
     background-color: grey;
     position: absolute;
-    z-index: 99;
+    z-index: 999;
     top: 0
     left: 0;
     font-size: 0.8rem;
