@@ -65,6 +65,19 @@ const Title = styled.div`
     @media (max-width: ${theme.sizes.mobile}) {
         font-size: 2.2rem;
     }
+
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
     
 `;
 
@@ -89,6 +102,18 @@ const Down = styled.div`
     bottom: 1rem;
     color: ${theme.colors.cream};
     font-size: 5rem;
+    animation: fadeInAnimation ease 4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+     }
     
     @media (max-width: ${theme.sizes.mobile}) {
         display: none;
@@ -307,6 +332,7 @@ export default function Home() {
             <SBSTopBar 
                 companyLogo="http://orenscoffee.com/wp-content/uploads/2021/04/footer.png"
                 articleURL="https://orenscoffee.columbiaspectator.com"
+                companyURL="https://orenscoffee.com/"
                 headline="Bean to Beverage: Your Coffee’s World-Class Journey"/>
             </TopBar>
             { explore ? <Explore onClick={exploreOff}/> :       

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { device } from '../device';
 import theme from '../theme';
@@ -20,6 +20,13 @@ const Logos = styled.div`
     height: fit-content;
     width: fit-content;
     margin: 0.5rem auto 0.5rem 0.5rem;
+
+    a {
+        height: fit-content;
+        width: fit-content;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
 `;
 
 const Logo = styled.div`
@@ -97,6 +104,10 @@ const MoreInfoIcon = styled.div`
 
     : hover {
         color: white;
+
+        .popup {
+            display: block;
+        }
     }
 
     @media (max-width: ${theme.sizes.mobile}) {
@@ -115,18 +126,46 @@ const ShareButton = styled.div`
     }
 `;
 
-const SBSTopBar = ({companyLogo, articleURL, headline}) => (
-    <Wrapper>
-        <Logos>
-            <SBSLogo><img src="https://sbs-assets.s3.amazonaws.com/SBS_White.png"/></SBSLogo>
-            <X><FontAwesomeIcon icon={faX}/></X>
-            <Logo><img src={companyLogo}/></Logo>
-        </Logos>
-        <CenterText>Sponsored Post<MoreInfoIcon><FontAwesomeIcon icon={faCircleQuestion}/></MoreInfoIcon></CenterText>
-        <ShareButton>
-            <CDSShareButton canonical_url={articleURL} headline={headline}/>
-        </ShareButton>
-    </Wrapper>
-);
+const InfoPopUp = styled.div`
+    display: none;
+    background-color: grey;
+    position: absolute;
+    z-index: 99;
+    top: 0
+    left: 0;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    width: 12rem;
+    padding: 1rem;
+    margin: 0.2rem;
+    font-family: 'Fraunces', serif;
+
+    @media (max-width: ${theme.sizes.mobile}) {
+        right: 0;
+    }
+`;
+
+const SBSTopBar = ({companyLogo, companyURL, articleURL, headline}) => {
+    const [isPopUpVisible, togglePopUp] = useState(false);
+    
+    return (
+        <Wrapper>
+                <Logos>
+                    <a href="https://www.columbiaspectator.com/sponsored-content/">
+                        <SBSLogo><img src="https://sbs-assets.s3.amazonaws.com/SBS_White.png"/></SBSLogo>
+                    </a>
+                    <X><FontAwesomeIcon icon={faX}/></X>
+                    <a href={companyURL}>
+                        <Logo><img src={companyLogo}/></Logo>
+                    </a>
+                </Logos>
+                <CenterText>Sponsored Post<MoreInfoIcon><FontAwesomeIcon icon={faCircleQuestion}/><InfoPopUp className='popup'>This post was created by Spectator Brand Studio, Columbia Spectator's brand marketing arm. Columbia Spectator's news and editorial teams were not involved in the creation of this post.</InfoPopUp></MoreInfoIcon></CenterText>
+                <ShareButton>
+                    <CDSShareButton canonical_url={articleURL} headline={headline}/>
+                </ShareButton>
+            </Wrapper>
+    );
+    
+};
 
 export default SBSTopBar;

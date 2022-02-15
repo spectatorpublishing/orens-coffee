@@ -88,6 +88,19 @@ const Down = styled.div`
 	left: 0;
 	right: 0;
 	text-align: center;
+
+	animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
 `;
 
 const TabletNotice = styled.div`
@@ -151,6 +164,19 @@ const Card = styled.div`
 		width: 90vw;
 		min-height: 60vh;
 		height: fit-content;
+    }
+
+	animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
     }
 `
 
