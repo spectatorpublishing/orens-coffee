@@ -14,7 +14,7 @@ export const coffee_data = [
         roasting: "To reach the desired profile, Kenyan coffee beans require special treatment. The beans are very hard and are roasted at a higher temperature compared to some other varieties, but not as dark as a Sumatra."
     },
     {
-        title:"La Manita Tarrazu",
+        title:"La Minita Tarrazu",
         image: "https://sbs-assets.s3.amazonaws.com/orens-coffee/65BF7EEC-C937-46FD-B2C5-5B1403504381.png" ,
         alttext:"Illustration of coffe beans in a basket with a costa rican ranch in the back",
         backgroundColor: "linear-gradient(180deg, #D1E6FF 17.71%, rgba(232, 120, 255, 0.99) 100%)",
