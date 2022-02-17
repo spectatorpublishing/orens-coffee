@@ -8,7 +8,7 @@ export const coffee_data = [
         color2: "#56800B",
         textColor: "#BA4F64",
         location: "Nakuru, Kenya",
-        flavor: "When drinking Kenyan coffee, expect an intense aroma, strong wine-like flavors, brightness, sweetness, and a rich body. A high quality Kenyan coffee should also have notes of raspberries and black currant.",
+        flavor: "When drinking Kenyan coffee, expect an intense aroma, strong wine-like flavors, brightness, sweetness, and a rich body. A high-quality Kenyan coffee should also have notes of raspberries and black currant.",
         bestGrown: "These beans are best when grown at high altitudes of 5,500 to 6,000 feet above sea level. Because coffee beans mature slower at high altitudes, Kenyan beans are sweeter than other beans in the Arabica family.",
         processing: "Kenyan coffee beans are fully washed; the skin is removed, and the beans are soaked in water to remove the mucilage layer. Finally, the beans are dried either in the sun or mechanically.",
         roasting: "To reach the desired profile, Kenyan coffee beans require special treatment. The beans are very hard and are roasted at a higher temperature compared to some other varieties, but are not roasted as dark as a Sumatra."
@@ -25,7 +25,7 @@ export const coffee_data = [
         flavor: "La Minita Tarrazu coffee is a well-balanced coffee popular for its smoothness and hints of nuttiness. It has a medium body with brilliant acidity, and sweet flavors of citrus, caramelized sugar, and creamy chocolate.",
         bestGrown: "High quality La Minita Tarrazu coffee beans are grown in Tarrazu, Costa Rica at 5,200 to 6,000 feet above sea level, where volcanic soil is abundant.",
         processing: "La Minita Tarrazu beans are fully washed; the skin is removed and the beans are soaked in water to remove the mucilage layer. Finally, the beans are dried either in the sun for quality or mechanically for efficiency.",
-        roasting: "La Minita Tarrazu, like Kenyan coffee, needs to be roasted at high temperatures to fully draw out its complex flavors. "
+        roasting: "La Minita Tarrazu, like Kenyan coffee, needs to be roasted at high temperatures to fully draw out its complex flavors."
     },
     {
         title:"Sumatra",
@@ -36,10 +36,10 @@ export const coffee_data = [
         color2: " #02886E",
         textColor: "#03442F",
         location: "Sumatra, Indonesia",
-        flavor: "Sumatra is prized as the world's most full-bodied coffee and is pleasantly herbaceous with hints of earthiness. While much less acidic than other types of coffee, its minimal acidity helps to cut through its thickness. Many liken the taste of Sumatran coffee to a stroll in the rainforest.",
-        bestGrown: "The best Sumatran coffee is grown in the volcanic soil-rich region of Northwestern Sumatra at about 5000 to 5500 feet above sea level.",
+        flavor: "Sumatra is prized as the world’s most full-bodied coffee and is pleasantly herbaceous with hints of earthiness. While much less acidic than other types of coffee, its minimal acidity helps to cut through its thickness. Many liken the taste of Sumatran coffee to a stroll in the rainforest.",
+        bestGrown: "The best Sumatran coffee is grown in the volcanic soil-rich region of Northwestern Sumatra at about 5,000 to 5,500 feet above sea level.",
         processing: "Sumatran coffee beans are semi-washed; the skin and silverskin are mechanically removed and the beans are sun or mechanically dried with the mucilage attached. This helps the beans develop even more body.",
-        roasting: "Sumatran beans are roasted especially dark to draw out a mellow sweetness and to, again, develop a fuller body."
+        roasting: "Sumatran beans are roasted especially dark to draw out a mellow sweetness and to develop a fuller body."
     }
 ];
 
@@ -51,8 +51,9 @@ export const orens_info = [
         alttext:"Illustration of a bottle of wine in front of a valley",
         backgroundColor: "linear-gradient(179.19deg, #FFFAF4 -31.63%, #3E6280 95.66%);",
         text: [
-            "Founder Oren Bloostein opened his first store in New York City in 1986, personally sourcing the best beans from around the world and researching the best roasting methods for each of his batches. 36 years later, Oren insists that has not changed today. Bloostein's expertise in coffee roasting has won him many awards and much respect as one of the world's leading authorities on coffee, and this can be seen, or rather, tasted, in each cup of coffee.",
-            "\n\nOren's Coffee understands that roasteries cannot exist without coffee farmers, so they are committed to paying farmers fairly for each crop. This allows farmers to reliably produce high quality crops year after year, which ultimately end up at Oren's Coffee's New Jersey roastery. Dedication to fair sourcing and attention to detail in roasting cement Oren's Coffee as one of New York City's most beloved roasters." 
+            "Oren’s Coffee is a New York City-based specialty coffee chain focused on providing its customers with the highest quality single-origin coffees. Each of the single-origin coffees mentioned can be found at Oren’s Coffee as a handcrafted pick-me-up, whole beans, or ground coffee. Oren’s Coffee has a store located conveniently next to Tom’s Restaurant and Milano Market at 2882 Broadway. Next time that craving for an excellent cup of coffee comes, stop by!",
+            "Founder Oren Bloostein opened his first store in New York City in 1986, personally sourcing the best beans from around the world and researching the best roasting methods for each of his batches. 36 years later, Oren insists that has not changed today. Bloostein’s expertise in coffee roasting has won him many awards and much respect as one of the world’s leading authorities on coffee, and this can be seen, or rather, tasted, in each cup of coffee.",
+            "Oren’s Coffee understands that roasteries cannot exist without coffee farmers, so they are committed to paying farmers and workers fairly for each crop. This allows farms to reliably produce high quality crops year after year, which ultimately end up at Oren’s Coffee’s New Jersey roastery. Dedication to fair sourcing and attention to detail in roasting cement Oren’s Coffee as one of New York City’s most beloved roasters." 
         ]
     }
 ];
