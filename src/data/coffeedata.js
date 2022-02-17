@@ -11,7 +11,7 @@ export const coffee_data = [
         flavor: "When drinking Kenyan coffee, expect an intense aroma, strong wine-like flavors, brightness, sweetness, and a rich body. A high quality Kenyan coffee should also have notes of raspberries and black currant.",
         bestGrown: "These beans are best when grown at high altitudes of 5,500 to 6,000 feet above sea level. Because coffee beans mature slower at high altitudes, Kenyan beans are sweeter than other beans in the Arabica family.",
         processing: "Kenyan coffee beans are fully washed; the skin is removed, and the beans are soaked in water to remove the mucilage layer. Finally, the beans are dried either in the sun or mechanically.",
-        roasting: "To reach the desired profile, Kenyan coffee beans require special treatment. The beans are very hard and are roasted at a higher temperature compared to some other varieties, but not as dark as a Sumatra."
+        roasting: "To reach the desired profile, Kenyan coffee beans require special treatment. The beans are very hard and are roasted at a higher temperature compared to some other varieties, but are not roasted as dark as a Sumatra."
     },
     {
         title:"La Minita Tarrazu",
@@ -23,7 +23,7 @@ export const coffee_data = [
         textColor: "#355A9E",
         location: "Tarrazu, Costa Rica",
         flavor: "La Minita Tarrazu coffee is a well-balanced coffee popular for its smoothness and hints of nuttiness. It has a medium body with brilliant acidity, and sweet flavors of citrus, caramelized sugar, and creamy chocolate.",
-        bestGrown: "High quality La Minita Tarrazu coffee beans are grown in Terrazu, Costa Rica at 5,200 to 6,000 feet above sea level, where volcanic soil is abundant.",
+        bestGrown: "High quality La Minita Tarrazu coffee beans are grown in Tarrazu, Costa Rica at 5,200 to 6,000 feet above sea level, where volcanic soil is abundant.",
         processing: "La Minita Tarrazu beans are fully washed; the skin is removed and the beans are soaked in water to remove the mucilage layer. Finally, the beans are dried either in the sun for quality or mechanically for efficiency.",
         roasting: "La Minita Tarrazu, like Kenyan coffee, needs to be roasted at high temperatures to fully draw out its complex flavors. "
     },
