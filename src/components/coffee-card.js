@@ -141,7 +141,6 @@ const CoffeeCard = ({data, onClose}) => (
                             <OrensSection>
                                 <OrenText>{data.text[0]}</OrenText>
                                 <OrenText>{data.text[1]}</OrenText>
-                                <OrenText>{data.text[2]}</OrenText>
                             </OrensSection>
                         <OrenLogo>
                             <img src={data.image} alt={data.alttext}/>
